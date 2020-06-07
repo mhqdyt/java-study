@@ -57,7 +57,7 @@ Gradle通常使用Groovy或Java语言编写构建脚本<br>
  ```
  
  ## 3、改变目录结构
-### 一、了解Java插件的sourceSets
+### 3.1了解Java插件的sourceSets
 
 #### 了解项目默认的项目结构
   src/main/java java业务代码<br>
@@ -85,7 +85,7 @@ jar{//jar的类的对象
 ```
 
 当我们执行build任务时，compileJava classes compileTestJava
-### 二、依赖和仓库
+### 3.2依赖和仓库
 项目坐标（group、 name 、 version）<br>
 例如： org.springfaremwork:spring-core:5.2.4 RELEASE<br>
 依赖<br>
@@ -111,6 +111,52 @@ jar{//jar的类的对象
     mavenCentral()//maven仓库
 }
   ```
+  ## 4.自定义任务
+  * 任务类必须继承DefaultTask。指定哪个方法是任务的Action,就在哪个方法前加上@TaskAction
+  * 任务类用Groovy或Java编写。使用buildSrc目录。存放在buildSrc/src/main/groovy或buildSrc/src/main/java里
+  ```
+  import org.gradle.api.DefaultTask
+  import org.gradle.api.tasks.TaskAction
+   class MyTask extends DefaultTask{
+    @TaskAction
+     public void start(){
+        System.out.println(“hello gradle”);
+     }
+}
+
+  ```
+  * 加了@Input的变量是任务暴露在外面的属性。使用任务时为其注入值。
+  ```
+  import org.gradle.api.DefaultTask
+  import org.gradle.api.tasks.TaskAction
+  import org.gradle.api.tasks.Input
+   class MyMailTask extends DefaultTask{
+    @Input
+    String username
+   @TaskAction
+   void send() {
+      println  username
+    }
+}
+
+  ```
+ * 声明一个任务<br>
+ `task  mymail1(type:MyMailTask){   username =‘Mary’ }`
+ * 再声明一个任务<br>
+ `task  mymail2(type:MyMailTask){   username =‘Tom’ }
+`
+### 自定义任务类的方式
+* 将任务类和任务对象的定义都放在build.gradle中。
+* 将任务类和任务对象的定义放在某个gradle文件中，如my.gradle中，在build.gradle中通过apply from:'my.gradle'将my.gradle包含中build.gradle中。
+* 在buildSrc/src/main/java中定义任务类MyTask，在build.gradle定义任务对象
+* 将任务类放在一个独立的工程中，在目标工程的build.gradle中的 buildscript{   }中配置仓库和依赖（任务类工程的依赖）。然后定义任务对象。
+## 测试覆盖率
+ 我们测试时，需要定义测试用例，测试用例定义的如何直接决定着  你的测试效果。一般要求测试覆盖率是80%左右。
+  哪些工具能帮我们计算出测试覆盖率。
+  Gradle提供了jacoco插件可以帮我们计算出测试覆盖率。
+  引入jacoco插件后，配置jacocoTestReport任务之后，才能使用
+  jacocTestReport任务来生成测试覆盖率报告。当然，生成测试覆盖  率之前我们必须先对项目进行构建。
+
 
 
  
