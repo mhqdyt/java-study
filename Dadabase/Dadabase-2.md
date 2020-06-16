@@ -31,4 +31,5 @@
 * 什么是数据库对象
 > * 数据库里用来存储和指定数据的各种概念和结构的总称
 > * 对象管理就是使用对象定义语言或者工具创建，修改或删除各种数据库对象的管理过程
-
+> * 常见的数据库对象
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-1.png)
