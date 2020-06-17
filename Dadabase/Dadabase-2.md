@@ -37,6 +37,7 @@
 > * 索引（INDEX）：索引提供指向存储在表的指定列中的数据值的指针，如同图书的目录，能够加快表的查询速度
 > * 序列（SEQUENCE）：用来产生唯一整数的数据库对象
 > * 存储过程、函数（STORE PROCEDURE、FUNCTION）：一组为了完成特定功能的SQL语句集。存储过程、函数经过编译后，可以被重复调用，从而减少数据库开发人员的工作量
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-1.png)
 ### 1.22制定命名规范
 * 良好的设计是良好的开端
 > * 数据库产品本身没有严格的限制
@@ -46,6 +47,7 @@
 > * 利用前缀标识对象类型
 > * 命名尽量采用富有意义，易于记忆，描述性强，简短而具有唯一性的单词
 > * 以项目为单位，采用名称词典
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-2.png)
 ### 3.备份恢复管理
 ### 3.1数据库备份
 * 备份数据库就是j将数据库中的数据，以及保证数据库系统正常运行的有关信息保存起来，以备系统出现故障后恢复数据库时使用
@@ -56,6 +58,8 @@
 > * 数据库环境
 * 数据库恢复
 > * 将数据库系统从故障或者瘫痪状态恢复到可正常运行，并能够将数据恢复到可接受状态的活动
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-3.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-4.png)
 ### 3.2备份方式
 * 全量备份：也称完全备份，对某个指定时间点的所有数据和对应结构进行一个完全的备份
 * 差异备份：指上一次全量备份后，对发生变化的数据进行的备份
@@ -65,12 +69,14 @@
 * 冷备：在备份期间，应用的读写操作不能进行
 * 物理备份：直接备份数据库所对应的数据文件甚至整个磁盘
 * 逻辑备份:将数据从数据库中导出,并将导出来的数据jji进行存档备份
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-5.png)
 ### 4.安全管理
 ### 4.1数据库系统安全框架
 * 网络层次安全
 * 操作系统层次安全
 * 数据库管理层次安全
 ### 4.2安全控制模型
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-6.png)
 * 安全控制
 > * 在数据应用系统的不同层次提供对有意和无意损害行为的安全防范
 >> * 加密存储数据
@@ -105,6 +111,7 @@
 * 供给类资源：又叫基础资源，是计算机硬件对应的资源,操作系统管理的资源
 * 并发性控制资源：这类资源包括且不限于：锁，队列，缓存，互斥信号等。数据库系统管理的资源
 * 性能管理资本原则：充分利用资源不浪费
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-7.png)
 ### 5.2性能管理意义
 * 资源的高效使用
 * 侦测系统问题
@@ -121,6 +128,7 @@
 > * 一个事务应该充分利用资源来加速处理时间
 ### 6.运维管理
 * 数据库安装
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-2/2-8.png)
 * 数据库卸载
 * 数据库迁移
 * 数据库扩容
