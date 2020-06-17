@@ -14,8 +14,10 @@
 * USERS：默认的用户表空间，创建新用户且m没有指定表空间时，该用户的所有信息会放入USE表空间
 * TEMP2：存放NOLOGGING表数据
 * TEMP2_UNDO：存放NOLOGGING表的Undo数据
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-4/4-1.png)
 ## 2.数据库对象
 ### 2.1表
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-4/4-2.png)
 * 在关系数据库中，数据库表就是y一系列二维数组的集合
 > * 用来代表和储存数据对象之间的关系
 * 记录
@@ -27,6 +29,7 @@
 > * 按照数据的存储方式
 >> * 行存储表（统计分析类查询，适合OLAP，数据挖掘等大型查询的应用查询）
 >> * 列存储表 （点查询，适合OLTP，这种轻量级事务，大量写操作，数据增删改比较多的场景）
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-4/4-3.png)
 ### 2.2临时表
 * GaussDB T支持创建临时表
 > * 临时表用来保存一个会话或者一个事务中需要的数据
@@ -43,7 +46,9 @@
 > * 没有Redo日志，出现故障数据库重启后无法恢复
 > * 适用对象：可靠性要求不高的非核心数据
 * 分区
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-4/4-4.png)
 * 分区表是将大表的数据分成许多小的数据子集，称为分区
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-4/4-5.png)
 > * 范围分区表
 > * 列表分区表
 > * 哈希分区表
@@ -55,6 +60,7 @@
 > * 均衡I/O
 * 分区剪枝的原理：将分区对象的查询可以仅搜索自己关心的分区，提高检索效率
 * 数据分布
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-4/4-6.png)
 > * GuassDB T分布式数据库的数据表时分散在所有的数据节点上的，所以创建表的时候需要指定分布列
 > * 分布方式
 >> * Hash：表数据通过Hash方式散列到集群中的所有DN
@@ -69,5 +75,6 @@
 > * 尽量选择离散值比较多的列，保证数据均匀分布，分布均匀是为了避免木桶效应，各个DN对等执行
 > * 在满足第一条原则的情况下，不要选择存在常量过滤的列
 > * 满足前两条原则的情况下，尽量选择关联字段或者聚合字段做分布列，这种方式是为了避免数据节点之间数据重分布，降低IO的开销从而提升关联操作和聚合操作的性能
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-4/4-7.png)
 ### 2.4数据
 
