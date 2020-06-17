@@ -18,13 +18,15 @@
 * 数据库的建立和维护功能
 * 与其他软件系统的通信功能
 ### 1.6数据库系统（Database System，DBS）：数据库系统是由数据库、数据库管理系统（及其应用开发工具）、应用程序和数据库管理员组成的存储、管理、处理和维护数据的系统。
-
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-2.png)
 ## 2数据库技术的产生与发展
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-4.png)
 ### 2.1数据库技术应数据管理任务的需求而产生。
 ### 2.2数据管理的发展：
 > * 应用需求推动
 > * 软硬件的飞速发展为基础
 > * 三个阶段：人工管理，文件系统，数据库系统
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-3.png)
 ### 2.3数据库系统的优势
 > * 整体数据的结构化
 > * 数据的共享性高,冗余度低且易补充
@@ -47,7 +49,7 @@
 * 建立在严格的数据概念基础上
 * 关系必须是规范化的
 * 关系的分量必须是一个不可分的数据项
-
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-5.png)
 ### 2.5结构化查询语言（Structured Query Language）
 ### SQL语言
 * 高级的非过程化编程语言，允许用户在高层数据结构上工作
@@ -70,6 +72,7 @@
 * 大数据时代来临
 ### 2.9NoSQL技术特点和类型
 ### NoSQL(Not Only SQL):非关系型的、分布式的、不保证满足ACID特性的一类数据管理系统
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-6.png)
 ### 技术特点
 * 对数据进行分区,利用大量节点并行处理获得高性能,同时能够采用横向扩展方式
 * 降低ACID一致性约束,允许暂时不一致,接受最终一致性.遵循BASE(Basically Available Soft state,Eventual consistency)原则
@@ -91,6 +94,7 @@
 * 采用Transparent Sharding中间件技术
 * DAAS(Database-as-Service,数据库及服务)
 ## 3关系型数据库架构介绍
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-7.png)
 ### 3.1单机架构
 * 为了避免应用服务和数据库服务对资源的竞争，单机架构也从早期的单主机模式发展到数据库独立主机模式，把应用和数据服务分开。应用服务可以增加服务器数量，进行负载均衡，增加系统并发能力。 
 * 优点
@@ -167,6 +171,7 @@
 > * 所有节点对等
 > * 可以通过任意节点查询或者加载数据
 > * 不存在性能瓶颈和单点风险
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-8.png)
 ## 4关系型数据库主流应用场景
 ### 4.1联机事务处理（OnLine Transaction Processing）
 * OLTP是传统关系型数据库的主要应用
@@ -191,6 +196,7 @@
 > * 报表系统，CRM系统
 > * 金融风险预测预警系统，反洗钱系统
 > * 数据集市，数据仓库
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-1/1-9.png)
 ### 4.3数据库性能衡量指标
 * TPC（Transaction Procession Performance Council，事务处理性能委员会）
 > * 职责是指定商务应用基准测试标准（Benchmark）的规范，性能和价格度量，并管理测试结果的发布
