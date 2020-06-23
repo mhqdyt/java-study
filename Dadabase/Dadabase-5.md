@@ -52,7 +52,7 @@ DQL（Data Query Language）数据查询语言
 >>> * 默认为byte类型，关键字为char
 >>> * size byte:最大能容纳的字节数，size char：最大能容纳的字符数
 >> * nchar（size):存储定长字符串
->> * 等同于char（size char）
->> * 关键字：nchar
+>>> * 等同于char（size char）
+>>> * 关键字：nchar
 
 
