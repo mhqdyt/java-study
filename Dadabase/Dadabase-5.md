@@ -54,5 +54,59 @@ DQL（Data Query Language）数据查询语言
 >> * nchar（size):存储定长字符串
 >>> * 等同于char（size char）
 >>> * 关键字：nchar
-
-
+> * 变长字符串类型（若输入长度小于size，不会利用空格补齐）
+>> * varchar(size[byte|char]):存储变长字节或字符串
+>>> * size byte：最大能容纳的字节数，size char：最大能容纳的字符数，1-8000字节
+>>> * 关键字：varchar
+>> * nvarchar(size):用于存储变长字符串
+>>> * 1-8000字节
+>>> * 关键字：nvarchar
+>> * clob:存储大对象变长字符串
+>>> * 占用字节：0-4G
+>>> * 关键字：clob，text，longtext，long
+* 日期类型
+> * 不带时区的时间戳（8字节）
+>> * datetime/date
+>>> * 保存年，月，日，时，分，秒
+>>> * 关键字：date，datetime
+>>> * 如：2019-08-22 17：29：13
+>> * timestamp[(n)]
+>>> * 保存年，月，日，时，分，秒，微秒，n取值范围为0-6，默认值为6
+>>> * 关键字：timestamp
+>>> * 如：2019-08-22 17：29：13.263183 （n=6）  2019-08-22 17：29：13.383 （n=3）
+> * 带时区的时间戳
+>> * timestamp(n) with time zone
+>>> * 保存年，月，日，时，分，秒，微秒，时区，占12字节
+>>> * 关键字：timestamp（n）with time zone
+>>> * 如：2019-08-22 17：41：30.135428 +08：00
+>> timestamp(n) with local time zone
+>>> * 不保存时区，存储时转换为数据库时区的timestamp，占8字节
+>>> * 关键字：timestamp（n）with local time zone
+>>> * 如：存储时：2019-08-22 17：41：30.135428   查看时：2019-08-22 17：41：30.135428 +08：00
+### 2.3非常用的数据类型
+* 二进制类型
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-1.png)
+* 布尔类型
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-2.png)
+* 时间间隔类型
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-3.png)
+### 2.4数据类型案例介绍
+* 创建表
+```
+SQL> create table T_STUDENT(
+student_id number(10),
+student_name varchar(100),
+student_grade int,
+student_is_excellent boolean,
+student_date date
+);
+```
+* 添加列
+```
+SQL> alter table T_STUDENT add student_description clob;
+```
+* 修改列的数据类型
+```
+SQL>alter table T_STUDENT modify student_grade double;
+```
+## 3.系统函数
