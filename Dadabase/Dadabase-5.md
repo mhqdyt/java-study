@@ -134,4 +134,23 @@ SQL>alter table T_STUDENT modify student_grade double;
 ![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-13.png)
 ![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-14.png)
 ![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-15.png)
-
+## 4.操作符
+> * 操作符可对一个或多个操作数进行处理，位置上可能处于操作数之前、之后，或两个操作数之间。
+> * 常见的操作符类型（从使用场景划分）
+>> * 逻辑操作符
+>> * 比较操作符
+>> * 算数运算符
+>> * 测试运算符
+>> * 通配符
+>> * 其他操作符
+### 4.1逻辑操作符
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-16.png)
+### 4.2比较操作符
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-17.png)
+### 4.3算数运算符
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-18.png)
+### 4.4测试运算符
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-19.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-20.png)
+### 4.5其他操作符
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-21.png)
