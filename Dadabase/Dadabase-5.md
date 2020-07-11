@@ -118,4 +118,20 @@ SQL>alter table T_STUDENT modify student_grade double;
 >> * 间隔函数
 >> * 类型转换函数
 ### 3.1数值计算函数
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-4.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-5.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-6.png)
+### 3.2字符处理函数
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-7.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-8.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-9.png)
+### 3.3时间日期函数
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-10.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-11.png)
+### 3.4间隔函数
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-12.png)
+### 3.5类型转换函数
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-13.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-14.png)
+![image](https://github.com/mhqdyt/java-study/blob/master/images/Dadabase-5/5-15.png)
 
