@@ -110,3 +110,12 @@ SQL> alter table T_STUDENT add student_description clob;
 SQL>alter table T_STUDENT modify student_grade double;
 ```
 ## 3.系统函数
+> * 系统函数是对一些业务逻辑的封装，以完成特定的功能。系统函数可以有参数，也可以没有参数，系统函数执行完成后会返回执行结果
+> * 系统函数的分类
+>> * 数值计算函数
+>> * 字符处理函数
+>> * 时间日期函数
+>> * 间隔函数
+>> * 类型转换函数
+### 3.1数值计算函数
+
